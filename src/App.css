@@ -1,0 +1,29 @@
+html{
+    scroll-behavior: smooth;
+  }
+  body{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+  }
+  html,body {
+    max-width: 100%;
+  }
+.container{
+    margin-left:127px;
+    margin-right: 127px;
+}
+
+section{
+    max-width:85%;
+    margin: auto;
+    margin-top:50px;
+}
+
+/* @media (max-width: 1090px){
+  section{
+    width:100%;
+    margin: auto;
+    margin-top:50px;
+} 
+} */

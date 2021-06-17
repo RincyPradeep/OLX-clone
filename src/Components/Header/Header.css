@@ -4,13 +4,16 @@
   position: fixed;
   width: 100vw;
   z-index: 999;
+  box-shadow: 0 1px 4px 0 rgb(0 0 0 / 10%);
+ 
 }
 
 .headerChildDiv {
-  width: 100%;
+  width: 85%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin:auto;
 }
 
 .placeSearch {
@@ -22,16 +25,51 @@
   border: 2px solid #002f34;
   border-radius: 4px;
   background-color: white;
+  position: relative;
+}
+.placeSearch .drop-down{
+  position: absolute;
+  top:47px;
+  left:0;
+  background-color: #fff;
+  width:16rem;
+  padding:15px;
+  height: 320px;
+  overflow-y: scroll;
+  border-radius: 5px;
+  box-shadow: 0 1px 4px 0 rgb(0 0 0 / 10%);
+}
+.drop-down span{
+  margin-left: 10px;
+}
+.placeSearch .drop-down a{
+  text-decoration: none;
+}
+.drop-down .current-location a,.recent-location a, .popular-location a{
+  display: flex;
+  align-items: center;
+  padding: 7px 0;
+  transition: all ease 0.6s;
+}
+.drop-down .recent-location p, .popular-location p{
+  color:#111;
+  margin-bottom: 0;
+}
+.drop-down .recent-location a:hover, .popular-location a:hover{
+  background-color: rgb(171, 247, 230);
 }
 
 .placeSearch ::selection {
   border-color: #23e5db;
-  outline-color: #23e5db;
+  outline-color: #23e5db; 
 }
 
 .placeSearch input {
   border-color: transparent;
   outline-color: transparent;
+}
+.placeSearch .fas{
+  cursor: pointer;
 }
 
 .productSearch {
@@ -82,6 +120,7 @@
   height: 48px;
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 
 .language span {
@@ -94,9 +133,6 @@
   margin-right: 5px;
 }
 
-.language svg {
-}
-
 .span {
   text-decoration: none;
   font-size: 16px;
@@ -106,6 +142,9 @@
   margin-right: 5px;
 }
 
+.loginPage, .logout{
+  cursor: pointer;
+}
 .loginPage hr {
   margin: 0;
   background-color: black;
@@ -114,6 +153,8 @@
 
 .loginPage a{
   text-decoration: none;
+  color:#000;
+  font-weight: 600;
 }
 
 .sellMenu {
@@ -154,6 +195,8 @@
 .sellMenu .sellMenuContent span {
   margin-left: 5px;
 }
+
+
 
 @media only screen and (max-width: 700px) {
   .placeSearch,

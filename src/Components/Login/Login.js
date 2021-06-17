@@ -2,7 +2,7 @@ import React, { useState, useContext } from 'react';
 import {FirebaseContext} from '../../store/Context'
 import Logo from '../../olx-logo.png';
 import './Login.css';
-import {useHistory} from 'react-router-dom';
+import {Link, useHistory} from 'react-router-dom';
 
 function Login() {
 
@@ -26,30 +26,32 @@ function Login() {
       <div className="loginParentDiv">
         <img width="200px" height="200px" src={Logo}></img>
         <form onSubmit={handleLogin}>
-          <label htmlFor="fname">Email</label>
+          <label htmlFor="email">Email</label>
           <br />
           <input
             className="input"
             type="email"
-            id="fname"
+            id="email"
             name="email"
             onChange={(e)=>setEmail(e.target.value)}
+            required
           />
           <br />
-          <label htmlFor="lname">Password</label>
+          <label htmlFor="password">Password</label>
           <br />
           <input
             className="input"
             type="password"
-            id="lname"
+            id="password"
             name="password"
             onChange={(e)=>setPassword(e.target.value)}
+            required
           />
           <br />
           <br />
           <button>Login</button>
         </form>
-        <a>Signup</a>
+        <Link to="/signup">Signup</Link>
       </div>
     </div>
   );

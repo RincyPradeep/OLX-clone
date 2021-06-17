@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react';
-import {useHistory} from 'react-router-dom';
+import {Link, useHistory} from 'react-router-dom';
 import Logo from '../../olx-logo.png';
 import { FirebaseContext } from '../../store/Context';
 import './Signup.css';
@@ -35,58 +35,58 @@ export default function Signup() {
         <img width="200px" height="200px" src={Logo}></img>
 
         <form onSubmit={handleSubmit}>
-          <label htmlFor="fname">Username</label>
+          <label htmlFor="uname">Username</label>
           <br />
           <input
             className="input"
             type="text"
             value={username}
             onChange={(e)=>setUsername(e.target.value)}
-            id="fname"
+            id="uname"
             name="name"
-            defaultValue="John"
+            required
           />
           <br />
-          <label htmlFor="fname">Email</label>
+          <label htmlFor="email">Email</label>
           <br />
           <input
             className="input"
             type="email"
-            id="fname"
+            id="email"
             value={email}
             onChange={(e)=>setEmail(e.target.value)}
             name="email"
-            defaultValue="John"
+            required
           />
           <br />
-          <label htmlFor="lname">Phone</label>
+          <label htmlFor="phone">Phone</label>
           <br />
           <input
             className="input"
             type="number"
-            id="lname"
+            id="phone"
             value={phone}
             onChange={(e)=>setPhone(e.target.value)}
             name="phone"
-            defaultValue="Doe"
+            required
           />
           <br />
-          <label htmlFor="lname">Password</label>
+          <label htmlFor="password">Password</label>
           <br />
           <input
             className="input"
             type="password"
-            id="lname"
+            id="password"
             value={password}
             onChange={(e)=>setPassword(e.target.value)}
             name="password"
-            defaultValue="Doe"
+            required
           />
           <br />
           <br />
           <button>Signup</button>
         </form>
-        <a>Login</a>
+        <Link to="/login">Login</Link>
       </div>
     </div>
   );

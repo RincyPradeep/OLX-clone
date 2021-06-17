@@ -1,3 +1,7 @@
+.postParentDiv{
+  max-width: 80%;
+}
+
 .moreView {
   margin: 16px 16px 24px;
   padding: 16px 16px 32px;
@@ -10,6 +14,7 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  font-weight: bold;
 }
 .heading :first-child {
   font-size: 24px;
@@ -21,26 +26,27 @@
   color: #002f34;
 }
 
-.recommendations .cards {
-  display: flex;
-}
-
-.moreView .cards {
+/* .moreView .cards {
   white-space: nowrap;
   overflow-x: scroll;
   overflow-y: hidden;
 }
 
-.card {
+::-webkit-scrollbar{
+  display: none;
+} */
+
+/* .card {
   margin-right: 15px;
   padding: 13px;
-  max-width: 222px;
-  width: 222px;
+  padding-left: 0;
+  
+  width:24%;
   height: 270px;
   display: inline-block;
   cursor: pointer;
+  box-shadow: 0 1px 4px 0 rgb(0 0 0 / 10%);
 }
-
 .card .favorite {
   display: flex;
   justify-content: flex-end;
@@ -60,28 +66,73 @@
   min-height: 100%;
   text-align: center;
 }
+
+.card .content{
+  border-left: 5px solid rgba(0,47,52,.64);
+  padding:0 7px;
+}
 .card .content .rate {
   margin-top: 10px;
   font-size: larger;
   font-weight: bold;
 }
-.card .content .kilometer {
+.card .content .category {
   font-size: medium;
 }
 .card .content .name {
   font-size: small;
 }
-.card .date {
+
+.place-date{
   display: flex;
-  justify-content: flex-end;
-  font-size: small;
-}
+  justify-content: space-between;
+  font-size: 12px;
+} */
 
 .recommendations {
   margin: 16px 16px 24px;
 }
 
+.recommendations .cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.recommendations .card{
+  width:23%;
+  margin:10px;
+} 
+
 .recommendations .heading span {
   font-size: 24px;
   color: #002f34;
+}
+.load-button{
+  text-align: center;
+}
+.load-button button{
+  padding: 10px;
+  border-radius: 10px;
+  background: #fff;
+  font-weight: bold;
+  font-size: 18px;
+  margin: 20px auto;
+}
+
+
+@media (max-width: 1090px){
+  .recommendations .card{
+    width:40%;
+    margin:10px;
+  }
+  section{
+    width:90%;
+    margin: auto;
+    margin-top:50px;
+  }
+  .postParentDiv{
+    max-width: 90%;
+  }
+  
 }
