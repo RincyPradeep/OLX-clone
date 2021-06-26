@@ -1,6 +1,5 @@
 import React, { Fragment, useContext, useState } from 'react';
 import './Create.css';
-import Header from '../Header/Header';
 import {FirebaseContext, AuthContext} from '../../store/Context'
 import {useHistory} from 'react-router-dom'
 
@@ -36,18 +35,16 @@ const Create = () => {
 
   // ---------Rendering------------------
   return (
-    <Fragment className="container">
-      <Header />
-      <card>
-        <div className="centerDiv">
-          
-            <label htmlFor="fname">Name</label>
+    <div className="createParentDiv">      
+        <div className="centerDiv">    
+        <h3>POST YOUR AD</h3>      
+            <label htmlFor="name">Name</label>
             <br />
             <input
               className="input"
               type="text"
-              id="fname"
-              name="fname"
+              id="name"
+              name="name"
               onChange={(e)=>setName(e.target.value)}
               required
             />
@@ -65,7 +62,7 @@ const Create = () => {
             <br />
             <label htmlFor="price">Price</label>
             <br />
-            <input className="input" type="number" id="price" name="price"
+            <input className="input" type="text" id="price" name="price"
                   onChange={(e)=>setPrice(e.target.value)}
                   required />
             <br />
@@ -85,8 +82,8 @@ const Create = () => {
             <button onClick={handleSubmit} className="uploadBtn">upload and Submit</button>
           
         </div>
-      </card>
-    </Fragment>
+     
+    </div>
   );
 };
 

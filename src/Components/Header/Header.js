@@ -79,16 +79,14 @@ function Header() {
           </div>
         </div>
         }
-
-        {/* -------------- */}
         </div>
+
         <div className="productSearch">
-          <div className="input">
             <input
               type="text"
               placeholder="Find cars,mobile phones and more..."
             />
-          </div>
+          
           <div className="searchAction">
             <Search color="#ffffff"></Search>
           </div>

@@ -1,10 +1,9 @@
 import React, { useState, useContext } from 'react';
 import {Link, useHistory} from 'react-router-dom';
-import Logo from '../../olx-logo.png';
 import { FirebaseContext } from '../../store/Context';
 import './Signup.css';
 
-export default function Signup() {
+export default function Signup({favorite}) {
   const history = useHistory();
   const [username,setUsername] = useState('')
   const [email,setEmail] = useState('')
@@ -21,7 +20,8 @@ export default function Signup() {
         firebase.firestore().collection('users').add({
           id:result.user.uid,
           username:username,
-          phone:phone
+          phone:phone,
+          favstatus:favorite
         }).then(()=>{
           history.push('/login');
         })
@@ -30,9 +30,9 @@ export default function Signup() {
 }
 
   return (
-    <div>
+    <div className="signup">
       <div className="signupParentDiv">
-        <img width="200px" height="200px" src={Logo}></img>
+        <img width="200px" height="200px" src="./Images/olx-logo.png" />
 
         <form onSubmit={handleSubmit}>
           <label htmlFor="uname">Username</label>
@@ -46,7 +46,7 @@ export default function Signup() {
             name="name"
             required
           />
-          <br />
+          <br /> 
           <label htmlFor="email">Email</label>
           <br />
           <input
@@ -63,7 +63,7 @@ export default function Signup() {
           <br />
           <input
             className="input"
-            type="number"
+            type="text"
             id="phone"
             value={phone}
             onChange={(e)=>setPhone(e.target.value)}

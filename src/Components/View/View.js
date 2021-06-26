@@ -23,7 +23,7 @@ function View() {
       <div className="imageShowDiv">
         <img
           src={postDetails.url}
-          alt=""
+          alt="product"
         />
       </div>
       <div className="rightSection">

@@ -2,7 +2,7 @@ import React from "react";
 import "./Post.css";
 import Card from '../Card/Card';
 
-function Posts() {
+function Posts({favorite,setFavorite}) {
   
   return (
     <section className="postParentDiv">
@@ -11,7 +11,7 @@ function Posts() {
           <span>Quick Menu</span>
           <span>View more</span>
         </div>
-        <Card />
+        <Card favorite={favorite} setFavorite={setFavorite} />
       </div>
       
       <div className="recommendations">

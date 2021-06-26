@@ -1,11 +1,12 @@
 .viewParentDiv {
   padding-top: 8rem;
   display: flex;
+  justify-content: space-between;
   margin-bottom: 50px;
 }
 .viewParentDiv .imageShowDiv {
   padding: 16px;
-  width: 55vw;
+  width: 40vw;
   height:60vh;
 
 }

@@ -6,7 +6,7 @@ import { FirebaseContext } from "../../store/Context";
 import { PostContext } from "../../store/PostContext";
 import {useHistory} from 'react-router-dom';
 
-function Card() {
+function Card({favorite,setFavorite}) {
   
   const { firebase } = useContext(FirebaseContext);
   const [products, setProducts] = useState([]);
@@ -29,16 +29,31 @@ function Card() {
       });
   }, []);
 
+  // const addToFavorite = () =>{
+  //   console.log("CLICKED");
+  //   setFavorite((prevState)=>{
+  //     if(prevState === 'active')
+  //       return ''
+  //     else
+  //       return 'active'
+  //   })
+  // }
+
   return (
         <div className="cards">       
           {products.map((product) => {                
-            return <div className="card" 
+            return <div className="card">
+              <div className="fav-btn">
+                 <Heart />
+              </div>
+            <div
                         onClick={()=>{
                                     setPostDetails(product)
                                     history.push('/view')}}>
-              <div className="favorite">
-                <Heart></Heart>
-              </div>
+              {/* <div className="favorite" onClick={()=>setFavorite(true)}>
+                {favorite ? <Heart bgcolor={'blue'} />: <Heart />}
+                
+              </div> */}
               <div className="image">
                 <img src={product.url} />
               </div>
@@ -51,7 +66,8 @@ function Card() {
                   <span>{product.createdAt}</span>
                 </div>
               </div>              
-            </div>           
+            </div>     
+            </div>      
           })}         
         </div>
   );

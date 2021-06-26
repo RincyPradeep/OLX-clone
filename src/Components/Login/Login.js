@@ -1,6 +1,5 @@
 import React, { useState, useContext } from 'react';
 import {FirebaseContext} from '../../store/Context'
-import Logo from '../../olx-logo.png';
 import './Login.css';
 import {Link, useHistory} from 'react-router-dom';
 
@@ -24,7 +23,7 @@ function Login() {
   return (
     <div>
       <div className="loginParentDiv">
-        <img width="200px" height="200px" src={Logo}></img>
+        <img width="200px" height="200px" src="./Images/olx-logo.png"></img>
         <form onSubmit={handleLogin}>
           <label htmlFor="email">Email</label>
           <br />
@@ -37,6 +36,7 @@ function Login() {
             required
           />
           <br />
+          <br />
           <label htmlFor="password">Password</label>
           <br />
           <input
@@ -47,8 +47,7 @@ function Login() {
             onChange={(e)=>setPassword(e.target.value)}
             required
           />
-          <br />
-          <br />
+          
           <button>Login</button>
         </form>
         <Link to="/signup">Signup</Link>
