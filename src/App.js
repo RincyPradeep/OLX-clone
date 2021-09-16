@@ -1,4 +1,4 @@
-import React,{useState,useEffect,useContext} from 'react';
+import React,{useEffect,useContext} from 'react';
 import {BrowserRouter as Router,Route} from 'react-router-dom';
 import './App.css';
 import Home from './Pages/Home';
@@ -10,23 +10,24 @@ import { AuthContext, FirebaseContext } from './store/Context';
 import Post from './store/PostContext'
 
 function App() {
-  let [favorite,setFavorite] = useState(false)
   const {setUser} =useContext(AuthContext)
   const {firebase} =useContext(FirebaseContext)
+
   useEffect(()=>{
     firebase.auth().onAuthStateChanged((user)=>{
       setUser(user)
     })
   })
+
   return (
     <div>
       <Post>
         <Router>
           <Route exact path='/'>
-            <Home favorite={favorite} setFavorite={setFavorite} />
+            <Home />
           </Route>
           <Route path='/signup'>
-            <Signup favorite={favorite} />
+            <Signup />
           </Route>
           <Route path='/login'>
             <Login />

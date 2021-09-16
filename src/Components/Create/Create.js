@@ -1,4 +1,4 @@
-import React, { Fragment, useContext, useState } from 'react';
+import React, { useContext, useState } from 'react';
 import './Create.css';
 import {FirebaseContext, AuthContext} from '../../store/Context'
 import {useHistory} from 'react-router-dom'
@@ -35,8 +35,9 @@ const Create = () => {
 
   // ---------Rendering------------------
   return (
-    <div className="createParentDiv">      
-        <div className="centerDiv">    
+    <div className="create-parent-div">     
+        <div className="center-div"> 
+        <form onSubmit={handleSubmit}>    
         <h3>POST YOUR AD</h3>      
             <label htmlFor="name">Name</label>
             <br />
@@ -77,12 +78,11 @@ const Create = () => {
           <img alt="Posts" width="200px" height="200px" src={image ? URL.createObjectURL(image) : '' }></img>
           
             <br />
-            <input type="file" onChange={(e)=>{setImage(e.target.files[0])}} required/>
+            <input type="file" accept="image/*" onChange={(e)=>{setImage(e.target.files[0])}} required/>
             <br />
-            <button onClick={handleSubmit} className="uploadBtn">upload and Submit</button>
-          
+            <button type="submit" className="upload-btn">upload and Submit</button>
+            </form>
         </div>
-     
     </div>
   );
 };

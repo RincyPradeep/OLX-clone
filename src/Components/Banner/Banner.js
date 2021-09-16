@@ -1,17 +1,30 @@
-import React from 'react';
-
+import React ,{ useState } from 'react';
 import './Banner.css';
-import Arrow from '../../assets/Arrow'
+import Categories from '../Categories/Categories';
+
 function Banner() {
+  let [toggleCategory,setToggleCategory] = useState(false)
+  
+  const showCategory =()=>{
+    if(toggleCategory){
+      setToggleCategory(false)
+    }else{
+      setToggleCategory(true)
+    }
+  }
   return (
-    <div className="bannerParentDiv">
-      <div className="bannerChildDiv">
-        <div className="menuBar container">
-          <div className="categoryMenu">
+    <div className="banner-parent-div">
+      <div className="banner-child-div">
+        <div className="menubar container">
+          <div className="category-menu">
             <span>ALL CATEGORIES</span>
-            <Arrow></Arrow> 
+            {/* <Arrow onClick={showCategory}></Arrow>  */}
+            <span><i className="fas fa-caret-down" onClick={showCategory}></i></span>
+            {
+              toggleCategory && <Categories />
+            }
           </div>
-          <div className="otherQuickOptions">
+          <div className="other-quick-options">
             <span>Cars</span>
             <span>Motorcycles</span>
             <span>Mobile Phones</span>
@@ -24,11 +37,10 @@ function Banner() {
         <div className="banner">
           <img
             src="../../../Images/banner copy.png"
-            alt=""
+            alt="banner"
           />
         </div>
-      </div>
-      
+      </div>     
     </div>
   );
 }

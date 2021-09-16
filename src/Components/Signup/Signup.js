@@ -3,7 +3,7 @@ import {Link, useHistory} from 'react-router-dom';
 import { FirebaseContext } from '../../store/Context';
 import './Signup.css';
 
-export default function Signup({favorite}) {
+export default function Signup() {
   const history = useHistory();
   const [username,setUsername] = useState('')
   const [email,setEmail] = useState('')
@@ -20,8 +20,7 @@ export default function Signup({favorite}) {
         firebase.firestore().collection('users').add({
           id:result.user.uid,
           username:username,
-          phone:phone,
-          favstatus:favorite
+          phone:phone          
         }).then(()=>{
           history.push('/login');
         })
@@ -31,8 +30,8 @@ export default function Signup({favorite}) {
 
   return (
     <div className="signup">
-      <div className="signupParentDiv">
-        <img width="200px" height="200px" src="./Images/olx-logo.png" />
+      <div className="signup-parent-div">
+        <img width="200px" height="200px" src="./Images/olx-logo.png" alt="logo" />
 
         <form onSubmit={handleSubmit}>
           <label htmlFor="uname">Username</label>
@@ -47,18 +46,6 @@ export default function Signup({favorite}) {
             required
           />
           <br /> 
-          <label htmlFor="email">Email</label>
-          <br />
-          <input
-            className="input"
-            type="email"
-            id="email"
-            value={email}
-            onChange={(e)=>setEmail(e.target.value)}
-            name="email"
-            required
-          />
-          <br />
           <label htmlFor="phone">Phone</label>
           <br />
           <input
@@ -71,6 +58,19 @@ export default function Signup({favorite}) {
             required
           />
           <br />
+          <label htmlFor="email">Email</label>
+          <br />
+          <input
+            className="input"
+            type="email"
+            id="email"
+            value={email}
+            onChange={(e)=>setEmail(e.target.value)}
+            name="email"
+            required
+          />
+          <br />
+          
           <label htmlFor="password">Password</label>
           <br />
           <input

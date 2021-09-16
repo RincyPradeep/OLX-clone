@@ -16,18 +16,18 @@ function View() {
         setUserDetails(doc.data())
       })
     })
-  },[])
+  })
 
   return (
-    <div className="viewParentDiv container">
-      <div className="imageShowDiv">
+    <div className="view-parent-div container">
+      <div className="image-show-div">
         <img
           src={postDetails.url}
           alt="product"
         />
       </div>
-      <div className="rightSection">
-        <div className="productDetails">
+      <div className="right-section">
+        <div className="product-details">
           <p>&#x20B9; {postDetails.price} </p>
           <p>{postDetails.name}</p>
           <p>{postDetails.category}</p>
@@ -35,7 +35,7 @@ function View() {
             <p className="date">{postDetails.createdAt}</p>
         </div>
         { userDetails &&
-              <div className="contactDetails">
+              <div className="contact-details">
                 <h3>Seller details</h3>
                 <p>Name:   {userDetails.username}</p>
                 <p>Phone:   {userDetails.phone}</p>

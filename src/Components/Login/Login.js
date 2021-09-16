@@ -22,8 +22,8 @@ function Login() {
 
   return (
     <div>
-      <div className="loginParentDiv">
-        <img width="200px" height="200px" src="./Images/olx-logo.png"></img>
+      <div className="login-parent-div">
+        <img width="200px" height="200px" src="./Images/olx-logo.png" alt="logo"></img>
         <form onSubmit={handleLogin}>
           <label htmlFor="email">Email</label>
           <br />

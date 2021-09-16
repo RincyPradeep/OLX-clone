@@ -1,40 +1,39 @@
-.footerParentDiv {
+.footer-parent-div {
   background: #ebeeef;
 }
-.footerParentDiv .content {
+.footer-parent-div .content {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  /* align-items: center; */
   width:85%;
   padding: 16px;
   margin:auto;
 }
-.footerParentDiv .content .heading {
+.footer-parent-div .content .heading {
   font-size: 24px;
   font-weight: bolder;
 }
 
-.footerParentDiv .content .list ul{
+.footer-parent-div .content .list ul{
   padding-left: 0;
 }
 
-.footerParentDiv .content .list li{
+.footer-parent-div .content .list li{
   list-style: none;
 }
-.footerParentDiv .content .list li a{
+.footer-parent-div .content .list li a{
   text-decoration: none;
   font-size: 13px;
   color:rgba(0,47,52,.64)
 }
-.footerParentDiv .content .list li a:hover{
+.footer-parent-div .content .list li a:hover{
   color:#000;
 }
-.footerParentDiv .footer{
+.footer-parent-div .footer{
   background: #002f34;
 }
 
-.footerParentDiv .footer .item{
+.footer-parent-div .footer .item{
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -66,8 +65,7 @@
 .store-icons img{
   width:100px;
   margin-right: 20px;
-  /* height:100px; */
 }
-.footerParentDiv .footer p {
+.footer-parent-div .footer p {
   margin: 0;
 }

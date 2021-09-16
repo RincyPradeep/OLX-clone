@@ -1,38 +1,42 @@
-.bannerParentDiv {
+.banner-parent-div {
   padding-top: 4em;
 }
 
-.bannerParentDiv .bannerChildDiv .menuBar {
+.banner-parent-div .banner-child-div .menubar {
   display: flex;
   padding: 10px 16px 10px 16px;
 }
 
-.bannerParentDiv .bannerChildDiv .menuBar span {
+.banner-parent-div .banner-child-div .menubar span {
   font-size: 14px;
 }
-
-.bannerParentDiv .bannerChildDiv .menuBar .categoryMenu span {
+.category-menu{
+  position: relative;
+}
+.banner-parent-div .banner-child-div .menubar .category-menu span {
   margin-right: 16px;
   font-weight: bolder;
 }
 
-.bannerParentDiv .bannerChildDiv .menuBar .otherQuickOptions span {
+.banner-parent-div .banner-child-div .menubar .other-quick-options span {
   padding: 10px;
 }
 
-.bannerChildDiv .banner {
+.banner-child-div .banner {
   position: relative;
   width: 100%;
 }
-.bannerChildDiv .banner img{
+.banner-child-div .banner img{
   width: 100%;
 }
 
+/* -----------------------------------For small screens------------------------- */
+
 @media only screen and (max-width: 700px) {
-  .otherQuickOptions {
+  .other-quick-options {
     display: none;
   }
-  .bannerChildDiv .banner {
+  .banner-child-div .banner {
     position: relative;
   }
 }

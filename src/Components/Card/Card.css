@@ -12,8 +12,6 @@
     margin-right: 15px;
     padding: 13px;
     padding-left: 0;
-    /* max-width: 222px;
-    width: 222px; */
     width:24%;
     height: 270px;
     display: inline-block;
@@ -25,7 +23,6 @@
     justify-content: flex-end;
     align-items: center;
   }
-
   
   .card .image {
     display: flex;
@@ -62,6 +59,8 @@
     justify-content: space-between;
     font-size: 12px;
   }
+ 
+  /* -----------------------For small screen----------------- */
 
   @media (max-width: 1090px){
     .card{

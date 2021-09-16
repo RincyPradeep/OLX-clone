@@ -1,9 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Footer.css';
 
 function Footer() {
   return (
-    <div className="footerParentDiv">
+    <div className="footer-parent-div">
        <div className="content">
         <div className="column1">
           <div className="heading">
@@ -11,10 +12,10 @@ function Footer() {
           </div>
           <div className="list">
             <ul>
-              <li><a href="#">kolkata</a></li>
-              <li><a href="#">Mumbai</a></li>
-              <li><a href="#">Chennai</a></li>
-              <li><a href="#">Pune</a></li>
+              <li><Link to="#">kolkata</Link></li>
+              <li><Link to="#">Mumbai</Link></li>
+              <li><Link to="#">Chennai</Link></li>
+              <li><Link to="#">Pune</Link></li>
             </ul>
           </div>
         </div>
@@ -24,10 +25,10 @@ function Footer() {
           </div>
           <div className="list">
             <ul>
-              <li><a href="#">Bhubaneshwar</a></li>
-              <li><a href="#">Hyderabad</a></li>
-              <li><a href="#">Chandigarh</a></li>
-              <li><a href="#">Nashik</a></li>
+              <li><Link to="#">Bhubaneshwar</Link></li>
+              <li><Link to="#">Hyderabad</Link></li>
+              <li><Link to="#">Chandigarh</Link></li>
+              <li><Link to="#">Nashik</Link></li>
             </ul>
           </div>
         </div>
@@ -37,11 +38,11 @@ function Footer() {
           </div>
           <div className="list">
             <ul>
-              <li><a href="#">About OLX Group</a></li>
-              <li><a href="#">Careers</a></li>
-              <li><a href="#">Contact Us</a></li>
-              <li><a href="#">OLXPeople</a></li>
-              <li><a href="#">Waah Jobs</a></li>
+              <li><Link to="#">About OLX Group</Link></li>
+              <li><Link to="#">Careers</Link></li>
+              <li><Link to="#">Contact Us</Link></li>
+              <li><Link to="#">OLXPeople</Link></li>
+              <li><Link to="#">Waah Jobs</Link></li>
             </ul>
           </div>
         </div>
@@ -51,9 +52,9 @@ function Footer() {
           </div>
           <div className="list">
             <ul>
-              <li><a href="#">Help</a></li>
-              <li><a href="#">Sitemap</a></li>
-              <li><a href="#">Legal & Privacy information</a></li>
+              <li><Link to="#">Help</Link></li>
+              <li><Link to="#">Sitemap</Link></li>
+              <li><Link to="#">Legal & Privacy information</Link></li>
             </ul>
           </div>
         </div>
@@ -62,14 +63,14 @@ function Footer() {
             <p>FOLLOW US</p>
           </div>
           <div className="social-media-icons">           
-            <div className="icon"> <a href="#"><i class="fab fa-facebook-f"></i></a></div>
-            <div className="icon"> <a href="#"><i class="fab fa-instagram"></i></a></div>
-            <div className="icon"> <a href="#"><i class="fab fa-twitter"></i></a></div>
-            <div className="icon"> <a href="#"><i class="fab fa-youtube"></i></a></div>
+            <div className="icon"> <Link to="#"><i className="fab fa-facebook-f"></i></Link></div>
+            <div className="icon"> <Link to="#"><i className="fab fa-instagram"></i></Link></div>
+            <div className="icon"> <Link to="#"><i className="fab fa-twitter"></i></Link></div>
+            <div className="icon"> <Link to="#"><i className="fab fa-youtube"></i></Link></div>
           </div>
           <div className="store-icons">
-            <a href="#"><img src="./Images/appstore-icon.png" alt= "appstore" /></a>
-            <a href="#"><img src="./Images/playstore-icon.png" alt= "playstore" /></a>
+            <Link to="#"><img src="./Images/appstore-icon.png" alt= "appstore" /></Link>
+            <Link to="#"><img src="./Images/playstore-icon.png" alt= "playstore" /></Link>
           </div>
         </div>
       </div> 
